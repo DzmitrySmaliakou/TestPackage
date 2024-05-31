@@ -7,16 +7,24 @@ let package = Package(
         .library(name: "Full", targets: ["FullTarget"]),
         .library(name: "Barcode", targets: ["BarcodeTarget"])
     ],
+    dependencies: [
+        .package(name: "FullCore",
+                 url: "https://github.com/Darkzwer/FullCore",
+                 branch: "main"),
+        .package(name: "BarcodeCore",
+                 url: "https://github.com/Darkzwer/BarcodeCore",
+                 branch: "main")
+    ],
     targets: [
         .target(
             name: "FullTarget",
             dependencies: [
-                .package(url: "https://github.com/Darkzwer/FullCore", branch: "main")
+                .byName(name: "FullCore")
             ]),
         .target(
             name: "BarcodeTarget",
             dependencies: [
-                .package(url: "https://github.com/Darkzwer/BarcodeCore", branch: "main")
+                .byName(name: "BarcodeCore")
             ])
     ]
 )
