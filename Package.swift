@@ -14,7 +14,7 @@ let package = Package(
             dependencies: [
                 .package(url: "https://github.com/Darkzwer/FullCore", branch: "main")
             ],
-        ),
+        )
         .target(
             name: "BarcodeTarget",
             dependencies: [
