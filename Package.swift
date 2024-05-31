@@ -6,7 +6,7 @@ let package = Package(
     platforms: [.iOS(.v11)],
     products: [
         .library(name: "Full", targets: ["FullTarget"]),
-        .library(name: "Barcode", targets: ["BarcodeTarget"]),
+        .library(name: "Barcode", targets: ["BarcodeTarget"])
     ],
     targets: [
         .target(
